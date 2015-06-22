@@ -10,7 +10,7 @@
 #include "turnOnLED.h"
 #include "Message.h"
 
-
+void testFunc(void);
 
 int main(void)
 {
@@ -21,6 +21,7 @@ int main(void)
 	initButton();
 	initLED();
 
+	testFunc();
 	ledInitData(&ledData);
 	buttonInitData(&buttonData);
 
