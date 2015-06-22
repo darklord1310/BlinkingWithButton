@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 4.8.1 mingw32 -mcpu=cortex-m4 -mthumb -g2 -Wall -O0 -c -DSTM32F429ZI -DSTM32F429xx -I..\..\..\..\..\..\..\CoIDE\workspace -I..\..\..\..\..\..\..\CoIDE\workspace\STM32Cube_FW_F4_V1.5.0\Drivers\CMSIS\Include -I..\..\..\..\..\..\..\CoIDE\workspace\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver -I..\..\..\..\..\..\..\CoIDE\workspace\BlinkingWithButton -I..\..\..\..\..\..\..\CoIDE\workspace\STM32Cube_FW_F4_V1.5.0\Drivers\CMSIS -I..\..\..\..\..\..\..\CoIDE\workspace\STM32Cube_FW_F4_V1.5.0\Drivers -I..\..\..\..\..\..\..\CoIDE\workspace\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc -I..\..\..\..\..\..\..\CoIDE\workspace\BlinkingWithButton\app">
+      <target file="TimerExpires.o" lastModified="14e196a6b30">
+         <source file="..\..\..\app\TimerExpires.c" lastModified="14e195b0b90"/>
+      </target>
+      <target file="stm32f4xx_hal_rcc.o" lastModified="14e196a695c">
+         <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="Button.o" lastModified="14e196a6e7a">
+         <source file="..\..\..\app\Button.c" lastModified="14e190b3610"/>
+      </target>
+      <target file="stm32f4xx_hal.o" lastModified="14e196a6862">
+         <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="initLED.o" lastModified="14e196a6dcf">
+         <source file="..\..\..\app\initLED.c" lastModified="14e190b3610"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="14e196a6c49">
+         <source file="..\..\..\app\system_stm32f4xx.c" lastModified="14e190b3610"/>
+      </target>
+      <target file="startup_stm32f429xx.o" lastModified="14e196a669e">
+         <source file="..\..\..\app\startup_stm32f429xx.s" lastModified="14e190b3610"/>
+      </target>
+      <target file="stm32f4xx_hal_cortex.o" lastModified="14e196a6ae2">
+         <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="ButtonSM.o" lastModified="14e196a6bdc">
+         <source file="..\..\..\app\ButtonSM.c" lastModified="14e190b3610"/>
+      </target>
+      <target file="main.o" lastModified="14e196a668e">
+         <source file="..\..\..\app\main.c" lastModified="14e195b0b90"/>
+      </target>
+      <target file="LedSM.o" lastModified="14e196a6769">
+         <source file="..\..\..\app\LedSM.c" lastModified="14e190b3610"/>
+      </target>
+      <target file="stm32f4xx_hal_gpio.o" lastModified="14e196a6d23">
+         <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" lastModified="14c0ebff760"/>
+      </target>
+      <target file="initButton.o" lastModified="14e196a6a17">
+         <source file="..\..\..\app\initButton.c" lastModified="14e190b3610"/>
+      </target>
+      <target file="Message.o" lastModified="14e196a65c4">
+         <source file="..\..\..\app\Message.c" lastModified="14e190b3610"/>
+      </target>
+   </processor>
+</history>
