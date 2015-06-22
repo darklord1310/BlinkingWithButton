@@ -3,7 +3,7 @@
 
 #include "stm32f4xx.h"
 
-void initButton();
+void initSysTick();
 
 
 #endif // initButton_H
