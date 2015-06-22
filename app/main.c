@@ -40,5 +40,9 @@ void initSysTick()
 	{
 		while(1);
 	}
+}
 
+int dummy(int value)
+{
+	return value *10;
 }
