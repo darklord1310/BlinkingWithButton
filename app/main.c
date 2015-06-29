@@ -9,26 +9,31 @@
 #include "turnOffLED.h"
 #include "turnOnLED.h"
 #include "Message.h"
+#include "Task.h"
 
 void testFunc(void);
+void taskSwitch(void);
 
 int main(void)
 {
 	LedData ledData ;
 	ButtonData buttonData ;
 
-	initSysTick();
-	initButton();
-	initLED();
 
-	testFunc();
-	ledInitData(&ledData);
-	buttonInitData(&buttonData);
+	initSysTick();
+	//initButton();
+	//initLED();
+
+	//testFunc();
+	//ledInitData(&ledData);
+	//buttonInitData(&buttonData);
+
+	taskSwitch();
 
 	while(1)
 	{
-		buttonSM(&buttonData);
-		ledSM(&ledData);
+		//buttonSM(&buttonData);
+		//ledSM(&ledData);
 
 	}
 	return 0;
