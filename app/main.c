@@ -21,12 +21,15 @@ int main(void)
 
 
 	initSysTick();
+	initTcb();
 	//initButton();
 	//initLED();
 
 	//testFunc();
 	//ledInitData(&ledData);
 	//buttonInitData(&buttonData);
+
+
 
 	taskSwitch();
 

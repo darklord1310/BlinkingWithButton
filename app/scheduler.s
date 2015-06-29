@@ -9,6 +9,9 @@
   .extern taskOneStack
   .extern taskTwoStack
 
+  .eqn TCB_NAME, 0
+  .eqn TCB_SP, 4
+
   .section  .text.taskSwitch
   .type  taskSwitch, %function
 taskSwitch:

@@ -187,20 +187,6 @@
       <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h" lastModified="14c0ebfff30">
          <include file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h"/>
       </source>
-      <source file="..\..\..\app\main.c" lastModified="14e3d769630">
-         <include file="..\..\..\app\Button.h"/>
-         <include file="..\..\..\app\ButtonSM.h"/>
-         <include file="..\..\..\app\initButton.h"/>
-         <include file="..\..\..\app\initLED.h"/>
-         <include file="..\..\..\app\LedSM.h"/>
-         <include file="..\..\..\app\State.h"/>
-         <include file="..\..\..\app\main.h"/>
-         <include file="..\..\..\app\TimerExpires.h"/>
-         <include file="..\..\..\app\turnOffLED.h"/>
-         <include file="..\..\..\app\turnOnLED.h"/>
-         <include file="..\..\..\app\Message.h"/>
-         <include file="..\..\..\app\Task.h"/>
-      </source>
       <source file="..\..\..\app\stm32f429xx.h" lastModified="14e3cf74c1e">
          <include file="..\..\..\app\core_cm4.h"/>
          <include file="..\..\..\app\system_stm32f4xx.h"/>
@@ -326,8 +312,6 @@
          <include file="..\..\..\app\Message.h"/>
          <include file="..\..\..\app\State.h"/>
       </source>
-      <source file="..\..\..\app\Task.h" lastModified="14e3d697e17">
-      </source>
       <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h" lastModified="14c0ebfff30">
          <include file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h"/>
       </source>
@@ -340,9 +324,6 @@
          <include file="..\..\..\app\turnOffLED.h"/>
          <include file="..\..\..\app\turnOnLED.h"/>
          <include file="..\..\..\app\TimerExpires.h"/>
-      </source>
-      <source file="..\..\..\app\Task.c" lastModified="14e3d756606">
-         <include file="..\..\..\app\Task.h"/>
       </source>
       <source file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rng.h" lastModified="14c0ebfff30">
          <include file="..\..\..\..\STM32Cube_FW_F4_V1.5.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h"/>
