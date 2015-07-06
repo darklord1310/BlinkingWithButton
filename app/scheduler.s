@@ -15,6 +15,7 @@
   .section  .text.taskSwitch
   .type  taskSwitch, %function
 taskSwitch:
+  push {lr}
   movs  r0, #0x00000000
   movs	r1, #0x11111111
   movs	r2, #0x22222222
@@ -39,18 +40,16 @@ SysTick_Handler:
   //write code here
   //push the rest of the registers...
   push {r4-r11}
-  //b	   .
-  ldr	r0, =mainTcb
+  ldr	r0, =mainTcb		//point r0 to mainTCB
   mov   r1,#0
   add   r1, sp
-  str   r1, [r0, #TCB_SP]
+  str   r1, [r0, #TCB_SP]	// store the tcb_sp value to sp
 
   ldr	r0, =TaskOneTcb
   ldr   sp, [r0, #TCB_SP]
-  pop   {r0-r12}
-  bx	lr
-  //push {r7, lr}
-  //add r7, sp, #0
-  //bl     HAL_IncTick;
-  //pop {r7, pc}
 
+  pop {r4-r11}
+  pop {r0-r3}
+  pop {r0-r1}
+  pop {lr}
+  bx	lr

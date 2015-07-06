@@ -19,7 +19,6 @@ int main(void)
 	LedData ledData ;
 	ButtonData buttonData ;
 
-
 	initSysTick();
 	initTcb();
 	//initButton();
@@ -27,8 +26,6 @@ int main(void)
 
 	//ledInitData(&ledData);
 	//buttonInitData(&buttonData);
-
-
 
 	taskSwitch();
 
