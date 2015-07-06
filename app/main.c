@@ -25,7 +25,6 @@ int main(void)
 	//initButton();
 	//initLED();
 
-	//testFunc();
 	//ledInitData(&ledData);
 	//buttonInitData(&buttonData);
 

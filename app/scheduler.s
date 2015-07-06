@@ -9,8 +9,8 @@
   .extern taskOneStack
   .extern taskTwoStack
 
-  .eqn TCB_NAME, 0
-  .eqn TCB_SP, 4
+  .equ TCB_NAME, 0
+  .equ TCB_SP, 4
 
   .section  .text.taskSwitch
   .type  taskSwitch, %function
@@ -28,7 +28,7 @@ taskSwitch:
   movs  r10, #0xaaaaaaaa
   movs  r11, #0xbbbbbbbb
   movs  r12, #0xcccccccc
-  ldr   lr, =#0xdeadface
+  //ldr   lr, =#0xdeadface
   push  {r0}
   b		.
 
@@ -39,7 +39,16 @@ SysTick_Handler:
   //write code here
   //push the rest of the registers...
   push {r4-r11}
-  b	   .
+  //b	   .
+  ldr	r0, =mainTcb
+  mov   r1,#0
+  add   r1, sp
+  str   r1, [r0, #TCB_SP]
+
+  ldr	r0, =TaskOneTcb
+  ldr   sp, [r0, #TCB_SP]
+  pop   {r0-r12}
+  bx	lr
   //push {r7, lr}
   //add r7, sp, #0
   //bl     HAL_IncTick;

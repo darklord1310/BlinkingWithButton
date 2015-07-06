@@ -299,40 +299,40 @@ LOAD c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-
                 0x08000200                . = ALIGN (0x4)
  *(.text)
  .text          0x08000200       0x5c c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/crtbegin.o
- .text          0x0800025c       0xc4 ..\obj\Task.o
+ .text          0x0800025c       0xbc ..\obj\Task.o
                 0x0800025c                taskOne
                 0x08000268                initTcb
- .text          0x08000320      0x154 ..\obj\system_stm32f4xx.o
-                0x08000320                SystemInit
-                0x0800037c                SystemCoreClockUpdate
- .text          0x08000474       0x50 ..\obj\stm32f4xx_it.o
-                0x08000474                NMI_Handler
-                0x08000480                HardFault_Handler
-                0x08000488                MemManage_Handler
-                0x08000490                BusFault_Handler
-                0x08000498                UsageFault_Handler
-                0x080004a0                SVC_Handler
-                0x080004ac                DebugMon_Handler
-                0x080004b8                PendSV_Handler
- .text          0x080004c4       0xf4 ..\obj\main.o
-                0x0800055c                main
-                0x08000570                initSysTick
-                0x08000598                dummy
+ .text          0x08000318      0x154 ..\obj\system_stm32f4xx.o
+                0x08000318                SystemInit
+                0x08000374                SystemCoreClockUpdate
+ .text          0x0800046c       0x50 ..\obj\stm32f4xx_it.o
+                0x0800046c                NMI_Handler
+                0x08000478                HardFault_Handler
+                0x08000480                MemManage_Handler
+                0x08000488                BusFault_Handler
+                0x08000490                UsageFault_Handler
+                0x08000498                SVC_Handler
+                0x080004a4                DebugMon_Handler
+                0x080004b0                PendSV_Handler
+ .text          0x080004bc       0xf4 ..\obj\main.o
+                0x08000554                main
+                0x08000568                initSysTick
+                0x08000590                dummy
  *(.text*)
  .text.__libc_init_array
-                0x080005b8       0x50 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
-                0x080005b8                __libc_init_array
+                0x080005b0       0x50 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                0x080005b0                __libc_init_array
  .text.startup.register_fini
-                0x08000608       0x14 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0800061c        0xc c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
-                0x0800061c                atexit
+                0x08000600       0x14 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08000614        0xc c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                0x08000614                atexit
  .text.__libc_fini_array
-                0x08000628       0x2c c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
-                0x08000628                __libc_fini_array
+                0x08000620       0x2c c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                0x08000620                __libc_fini_array
  .text.__register_exitproc
-                0x08000654       0xa4 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
-                0x08000654                __register_exitproc
- *fill*         0x080006f8        0x8 
+                0x0800064c       0xa4 c:/program files/gnu tools arm embedded/4.9 2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                0x0800064c                __register_exitproc
+ *fill*         0x080006f0       0x10 
  .text.taskSwitch
                 0x08000700      0x200 ..\obj\scheduler.o
                 0x08000700                taskSwitch
@@ -646,13 +646,13 @@ OUTPUT(Test.elf elf32-littlearm)
  .debug_aranges
                 0x000000a8       0x20 ..\obj\main.o
 
-.debug_line     0x00000000      0x710
+.debug_line     0x00000000      0x717
  .debug_line    0x00000000      0x14a ..\obj\Task.o
  .debug_line    0x0000014a      0x174 ..\obj\system_stm32f4xx.o
- .debug_line    0x000002be       0x8a ..\obj\scheduler.o
- .debug_line    0x00000348      0x167 ..\obj\stm32f4xx_it.o
- .debug_line    0x000004af       0xad ..\obj\startup_stm32f429xx.o
- .debug_line    0x0000055c      0x1b4 ..\obj\main.o
+ .debug_line    0x000002be       0x91 ..\obj\scheduler.o
+ .debug_line    0x0000034f      0x167 ..\obj\stm32f4xx_it.o
+ .debug_line    0x000004b6       0xad ..\obj\startup_stm32f429xx.o
+ .debug_line    0x00000563      0x1b4 ..\obj\main.o
 
 .debug_str      0x00000000      0xb4c
  .debug_str     0x00000000      0x174 ..\obj\Task.o

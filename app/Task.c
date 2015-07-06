@@ -20,8 +20,7 @@ Tcb TaskTwoTcb;
  */
 void taskOne()
 {
-  
-  
+
 }
 
 
@@ -35,8 +34,8 @@ void initTcb()
 	mainTcb.sp = 0;
 
 	TaskOneTcb.name = "thread #1";
-    TaskOneTcb.sp = (uint32_t)taskOneStack[1028];
     CpuContext *cc = (CpuContext *)(  (uint32_t)&taskOneStack[1024] - sizeof(CpuContext) );
+    TaskOneTcb.sp = (uint32_t)cc;
     cc->R0 = 0x00;
     cc->R1 = 0x11;
     cc->R2 = 0x22;
