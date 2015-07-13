@@ -18,6 +18,7 @@ Tcb TaskTwoTcb;
  * 6) pop all pushed register
  * 7) return from interrupt using "bx lr"
  *
+ *
  * 1) push the rest of the registers
  * 2) load runningTcb into R4
  * 3) store the current SP into runningTCB(through R0), push LR
@@ -32,7 +33,12 @@ Tcb TaskTwoTcb;
  */
 void taskOne()
 {
-	return;
+	asm(
+
+
+	);
+
+	while(1);
 }
 
 

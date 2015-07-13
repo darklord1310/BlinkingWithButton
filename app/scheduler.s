@@ -49,7 +49,4 @@ SysTick_Handler:
   ldr   sp, [r0, #TCB_SP]
 
   pop {r4-r11}
-  pop {r0-r3}
-  pop {r0-r1}
-  pop {lr}
   bx	lr
