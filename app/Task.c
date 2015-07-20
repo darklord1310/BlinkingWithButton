@@ -33,10 +33,10 @@ Tcb TaskTwoTcb;
  */
 void taskOne()
 {
-	asm(
+	//asm(
 
 
-	);
+	//);
 
 	while(1);
 }

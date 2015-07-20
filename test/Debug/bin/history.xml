@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g2 -Map=Test.map -O0 --gc-sections -LC:/Users/D203C-01/CoIDE/workspace/BlinkingWithButton -TC:/Users/D203C-01/CoIDE/workspace/BlinkingWithButton/stm32f407vg_flash.ld -g">
+      <target file="Test.elf" lastModified="14ea9868df9">
+         <source file="..\obj\assembly.o" lastModified="14ea9868062"/>
+         <source file="..\obj\Task.o" lastModified="14ea9867bb1"/>
+         <source file="..\obj\ButtonSM.o" lastModified="14ea9868311"/>
+         <source file="..\obj\stm32f4xx_hal_cortex.o" lastModified="14ea98681f8"/>
+         <source file="..\obj\initButton.o" lastModified="14ea986811e"/>
+         <source file="..\obj\Button.o" lastModified="14ea98685ee"/>
+         <source file="..\obj\initLED.o" lastModified="14ea9868523"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="14ea986837e"/>
+         <source file="..\obj\scheduler.o" lastModified="14ea9867f4a"/>
+         <source file="..\obj\stm32f4xx_hal.o" lastModified="14ea9867f3a"/>
+         <source file="..\obj\TimerExpires.o" lastModified="14ea9868246"/>
+         <source file="..\obj\stm32f4xx_it.o" lastModified="14ea9867d85"/>
+         <source file="..\obj\stm32f4xx_hal_gpio.o" lastModified="14ea9868468"/>
+         <source file="..\obj\LedSM.o" lastModified="14ea9867e60"/>
+         <source file="..\obj\stm32f4xx_hal_rcc.o" lastModified="14ea9868053"/>
+         <source file="..\obj\startup_stm32f429xx.o" lastModified="14ea9867d95"/>
+         <source file="..\obj\Message.o" lastModified="14ea9867bf0"/>
+         <source file="..\obj\main.o" lastModified="14ea9867cba"/>
+      </target>
+   </processor>
+</history>

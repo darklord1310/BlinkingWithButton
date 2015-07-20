@@ -1,6 +1,4 @@
 #include "LinkList.h"
-#include "malloc.h"
-#include <assert.h>
 #include <stdio.h>
 
 void initLinkList(LinkList *newlist)
@@ -17,24 +15,6 @@ void initListNode(void *data)
   
 }
 
-/*
-  Input : firstNode is the head of the list
-*/
-void destroyListNode(ListNode *firstNode)
-{
-  if(firstNode != NULL)
-  {
-    if(firstNode->next != NULL)
-      destroyListNode(firstNode->next);
-    free(firstNode);
-  }
-}
-
-void destroyLinkList(LinkList *list)
-{
-  if(list != NULL)
-    free(list);
-}
 
 /*
   Return: 1 if empty
@@ -72,10 +52,11 @@ void addToTail(LinkList *list, void *dataToAdd)
 /*
   Input: firstNode    is the head of the list
 */
-void removeTail(LinkList *list)
+void *removeTail(LinkList *list)
 {
   ListNode *del, *previousDel;                //previousDel will point to the node before the node being to delete
                                               //del         will point to the node that is to be delete
+  void *removeValue;
   
   if(!isListEmpty(list))                      //check if list is not empty
   {
@@ -90,18 +71,22 @@ void removeTail(LinkList *list)
     
     if(previousDel == NULL)
     {
+      removeValue = del->data;
       list->head = NULL;
       list->tail = NULL;
-      free(list->head);
+      //free(list->head);
     }
     else
     {
+      removeValue = del->data;
       previousDel->next = NULL;
       list->tail = previousDel;
-      free(del);
+      //free(del);
     }
     list->ListSize--;
   }
+  
+  return removeValue;
 }
 
 
@@ -127,16 +112,20 @@ void addToHead(LinkList *list, void *valueToAdd)
 }
 
 
-void removeHead(LinkList *list)
+void *removeHead(LinkList *list)
 {
+  void *removeValue;
+  
   if(!isListEmpty(list))
   {
+    removeValue = list->head->data;
     list->head = list->head->next;
     if(list->head == NULL)
       list->tail = NULL;
     list->ListSize--;
   }
-
+  
+  return removeValue;
 }
 
 
