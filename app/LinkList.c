@@ -9,10 +9,10 @@ void initLinkList(LinkList *newlist)
 }
 
 
-void initListNode(void *data)
+void initListNode(ListNode *newNode)
 {
-  
-  
+  newNode->data = 0;
+  newNode->next = NULL;
 }
 
 
@@ -31,23 +31,21 @@ int isListEmpty(LinkList *list)
 
 void addToTail(LinkList *list, void *dataToAdd)
 {
-  ListNode *newNode;
-  newNode = malloc(sizeof(ListNode)); 
+  ListNode newNode;
+  initListNode(&newNode);
   
-  if(newNode != NULL)
-  {
-    newNode->data = dataToAdd;
-    newNode->next = NULL;
+  newNode.data = dataToAdd;
+  newNode.next = NULL;
 
-    if( isListEmpty(list) )
-      list->head = newNode;
-    else
-      list->tail->next = newNode;
+  if( isListEmpty(list) )
+    list->head = &newNode;
+  else
+    list->tail->next = &newNode;
   
-    list->tail = newNode;
-    list->ListSize++;
-  }
+  list->tail = &newNode;
+  list->ListSize++;
 }
+
 
 /*
   Input: firstNode    is the head of the list
@@ -92,20 +90,21 @@ void *removeTail(LinkList *list)
 
 void addToHead(LinkList *list, void *valueToAdd)
 {
-  ListNode *newNode;
-  newNode = malloc(sizeof(ListNode)); 
-  newNode->data = valueToAdd;
-  newNode->next = NULL;
+  ListNode newNode;
+  initListNode(&newNode);
+  
+  newNode.data = valueToAdd;
+  newNode.next = NULL;
   
   if(isListEmpty(list))
   {
-    list->head = newNode;
-    list->tail = newNode;
+    list->head = &newNode;
+    list->tail = &newNode;
   }
   else
   {
-    newNode->next = list->head;
-    list->head = newNode;
+    newNode.next = list->head;
+    list->head = &newNode;
   }
   
   list->ListSize++;

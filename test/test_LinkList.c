@@ -15,19 +15,19 @@ void test_initLinkList_should_return_a_list_with_head_and_tail_point_to_null_and
   LinkList list;
   initLinkList(&list);
   
-  //TEST_ASSERT_NOT_NULL(list);
   TEST_ASSERT_NULL(list.head);
   TEST_ASSERT_NULL(list.tail);
   TEST_ASSERT_EQUAL(0,list.ListSize);
 
 }
 
-/*
-void xtest_isListEmpty_given_empty_list_should_return_1()
+
+void test_isListEmpty_given_empty_list_should_return_1()
 {
-  LinkList *list;
-  initLinkList(list);
-  int check = isListEmpty(list);
+  LinkList list;
+  initLinkList(&list);
+  
+  int check = isListEmpty(&list);
   
   TEST_ASSERT_EQUAL(1, check); 
 }
@@ -41,20 +41,21 @@ void xtest_isListEmpty_given_empty_list_should_return_1()
                    tail --> 1
 
 */
-/*
-void xtest_addToTail_empty_list_and_add_1_should_get_head_is_1_tail_is_1()
+void test_addToTail_empty_list_and_add_1_should_get_head_is_1_tail_is_1()
 {
-  LinkList *list;
-  initLinkList(list);
+  LinkList list;
+  initLinkList(&list);
+  
   int value1 = 1;
-  addToTail(list, (void *)value1);
+  addToTail(&list, (void *)value1);
 
-  TEST_ASSERT_NOT_NULL(list->head);
-  TEST_ASSERT_NOT_NULL(list->tail);
-  TEST_ASSERT_EQUAL( list->head->data , value1);
-  TEST_ASSERT_EQUAL( list->tail->data , value1);
-  TEST_ASSERT_EQUAL(1,list->ListSize);
+  TEST_ASSERT_NOT_NULL(list.head);
+  TEST_ASSERT_NOT_NULL(list.tail);
+  TEST_ASSERT_EQUAL( list.head->data , value1);
+  TEST_ASSERT_EQUAL( list.tail->data , value1);
+  TEST_ASSERT_EQUAL(1,list.ListSize);
 }
+
 
 /* Before add 2 :  head --> 1 
                    tail --> 1
@@ -63,19 +64,19 @@ void xtest_addToTail_empty_list_and_add_1_should_get_head_is_1_tail_is_1()
                    tail --> 2
 
 */
-/*
-void xtest_addToTail_given_head_is_1_and_add_2_should_get_head_is_1_tail_is_2()
+
+void test_addToTail_given_head_is_1_and_add_2_should_get_head_is_1_tail_is_2()
 {
-  LinkList *list;
-  initLinkList(list);
+  LinkList list;
+  initLinkList(&list);
   int value1 = 1;
   int value2 = 2;
-  addToTail(list,(void *)value1);
-  addToTail(list,(void *)value2);
+  addToTail(&list,(void *)value1);
+  addToTail(&list,(void *)value2);
   
-  TEST_ASSERT_EQUAL( list->head->data , value1);
-  TEST_ASSERT_EQUAL( list->tail->data , value2);
-  TEST_ASSERT_EQUAL(2,list->ListSize);
+  TEST_ASSERT_EQUAL( list.head->data , value1);
+  TEST_ASSERT_EQUAL( list.tail->data , value2);
+  TEST_ASSERT_EQUAL(2,list.ListSize);
 }
 
 

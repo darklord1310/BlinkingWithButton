@@ -27,9 +27,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Test/scheduler.s"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="839" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Task.c" partName="Task.c" path="C:/Users/D203C-01/CoIDE/workspace/BlinkingWithButton/app/Task.c" title="Task.c" tooltip="C:/Users/D203C-01/CoIDE/workspace/BlinkingWithButton/app/Task.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Task.c" partName="Task.c" path="C:/Users/Jet/Downloads/stm32cubef4/BlinkingWithButton/app/Task.c" title="Task.c" tooltip="C:/Users/Jet/Downloads/stm32cubef4/BlinkingWithButton/app/Task.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Test/Task.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="921" selectionTopPixel="390"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="813" selectionTopPixel="390"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Task.h" partName="Task.h" path="C:/Users/D203C-01/CoIDE/workspace/BlinkingWithButton/app/Task.h" title="Task.h" tooltip="C:/Users/D203C-01/CoIDE/workspace/BlinkingWithButton/app/Task.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Test/Task.h"/>
@@ -90,8 +90,8 @@
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showMemoryBrowserAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showVariablesAction"/>
 <hide_menu_item_id id="org.coocox.builder.ui.openProjectExplorerAction"/>
-<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
 <hide_menu_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
+<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showRegistersAction"/>
 <hide_toolbar_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
@@ -250,9 +250,6 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/Test/scheduler.s"/>
 </editors>
 <item historyLabel="scheduler.s" index="0">
-<position info="not_deleted" x="1020" y="0"/>
-</item>
-<item historyLabel="scheduler.s" index="0">
 <position/>
 </item>
 <item historyLabel="scheduler.s" index="0">
@@ -406,50 +403,47 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Test/main.c">
-<persistable path="/Test/main.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="initButton.c" tooltip="Test/initButton.c">
+<persistable path="/Test/initButton.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f429xx.s" tooltip="Test/startup_stm32f429xx.s">
-<persistable path="/Test/startup_stm32f429xx.s"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ButtonSM.c" tooltip="Test/ButtonSM.c">
+<persistable path="/Test/ButtonSM.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="exploreCC/Hardware/stm32f4xx_it.c">
-<persistable path="/exploreCC/Hardware/stm32f4xx_it.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LedSM.c" tooltip="Test/LedSM.c">
+<persistable path="/Test/LedSM.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f429xx.s" tooltip="exploreCC/startup_stm32f429xx.s">
-<persistable path="/exploreCC/startup_stm32f429xx.s"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TimerExpires.c" tooltip="Test/TimerExpires.c">
+<persistable path="/Test/TimerExpires.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="exploreCC/Library/main.c">
-<persistable path="/exploreCC/Library/main.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Message.h" tooltip="Test/Message.h">
+<persistable path="/Test/Message.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ButtonSM.h" tooltip="exploreCC/Library/ButtonSM.h">
-<persistable path="/exploreCC/Library/ButtonSM.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Message.c" tooltip="Test/Message.c">
+<persistable path="/Test/Message.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="State.h" tooltip="exploreCC/Library/State.h">
-<persistable path="/exploreCC/Library/State.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Button.c" tooltip="Test/Button.c">
+<persistable path="/Test/Button.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ButtonSM.c" tooltip="exploreCC/Library/ButtonSM.c">
-<persistable path="/exploreCC/Library/ButtonSM.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="initLED.c" tooltip="Test/initLED.c">
+<persistable path="/Test/initLED.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LedSM.c" tooltip="exploreCC/Library/LedSM.c">
-<persistable path="/exploreCC/Library/LedSM.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="initButton.h" tooltip="Test/initButton.h">
+<persistable path="/Test/initButton.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Test1/main.c">
-<persistable path="/Test1/main.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="turnOnLED.h" tooltip="Test/turnOnLED.h">
+<persistable path="/Test/turnOnLED.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Blinky/main.c">
-<persistable path="/Blinky/main.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Button.h" tooltip="Test/Button.h">
+<persistable path="/Test/Button.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Blinky/main.c">
-<persistable path="/Blinky/main.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="turnOffLED.h" tooltip="Test/turnOffLED.h">
+<persistable path="/Test/turnOffLED.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm4.h" tooltip="Test01/Core/core_cm4.h">
-<persistable path="/Test01/Core/core_cm4.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Yield.h" tooltip="Test/Yield.h">
+<persistable path="/Test/Yield.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal_cortex.c" tooltip="Test01/Hardware/stm32f4xx_hal_cortex.c">
-<persistable path="/Test01/Hardware/stm32f4xx_hal_cortex.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal_cortex.c" tooltip="Test01/Hardware/stm32f4xx_hal_cortex.c">
-<persistable path="/Test01/Hardware/stm32f4xx_hal_cortex.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LEDsStateMachine.c" tooltip="Test/LEDsStateMachine.c">
+<persistable path="/Test/LEDsStateMachine.c"/>
 </file>
 </mruList>
 </workbench>
