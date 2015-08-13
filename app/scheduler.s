@@ -40,13 +40,17 @@ SysTick_Handler:
   //write code here
   //push the rest of the registers...
   push {r4-r11}
-  ldr	r0, =mainTcb		//point r0 to mainTCB
-  mov   r1,#0
+  ldr	r3, =runningTcb	   		//let r3 point to runningTcb
+  ldr   r4, [r3]		   		//get the value r3 pointing to and put it into r4
+  mov   r1, #0
   add   r1, sp
-  str   r1, [r0, #TCB_SP]	// store the tcb_sp value to sp
-
+  str   r1, [r3, #TCB_SP]		// store the sp into runningTcb
+  push  {lr}					//push lr
   ldr	r0, =TaskOneTcb
   ldr   sp, [r0, #TCB_SP]
 
   pop {r4-r11}
   bx	lr
+
+
+

@@ -20,10 +20,12 @@ c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\lib
 Allocating common symbols
 Common symbol       size              file
 
+readyQueue          0x4               ..\obj\Task.o
 taskTwoStack        0x404             ..\obj\Task.o
 mainTcb             0x8               ..\obj\Task.o
 TaskOneTcb          0x8               ..\obj\Task.o
 TaskTwoTcb          0x8               ..\obj\Task.o
+runningTcb          0x4               ..\obj\Task.o
 taskOneStack        0x404             ..\obj\Task.o
 
 Discarded input sections
@@ -171,6 +173,19 @@ Discarded input sections
  .debug_frame   0x00000000       0x34 ..\obj\initLED.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\initLED.o
+ .text          0x00000000      0x1a4 ..\obj\LinkList.o
+ .data          0x00000000        0x0 ..\obj\LinkList.o
+ .bss           0x00000000        0x0 ..\obj\LinkList.o
+ .debug_info    0x00000000      0x209 ..\obj\LinkList.o
+ .debug_abbrev  0x00000000      0x10b ..\obj\LinkList.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\LinkList.o
+ .debug_line    0x00000000       0xb7 ..\obj\LinkList.o
+ .debug_str     0x00000000      0x164 ..\obj\LinkList.o
+ .comment       0x00000000       0x71 ..\obj\LinkList.o
+ .debug_frame   0x00000000      0x118 ..\obj\LinkList.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\LinkList.o
  .bss           0x00000000        0x0 ..\obj\system_stm32f4xx.o
  .text          0x00000000        0x0 ..\obj\scheduler.o
  .data          0x00000000        0x0 ..\obj\scheduler.o
@@ -299,40 +314,40 @@ LOAD c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-
                 0x08000200                . = ALIGN (0x4)
  *(.text)
  .text          0x08000200       0x5c c:/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/crtbegin.o
- .text          0x0800025c      0x134 ..\obj\Task.o
+ .text          0x0800025c      0x160 ..\obj\Task.o
                 0x0800025c                taskOne
-                0x08000264                initTcb
- .text          0x08000390      0x154 ..\obj\system_stm32f4xx.o
-                0x08000390                SystemInit
-                0x080003ec                SystemCoreClockUpdate
- .text          0x080004e4       0x50 ..\obj\stm32f4xx_it.o
-                0x080004e4                NMI_Handler
-                0x080004f0                HardFault_Handler
-                0x080004f8                MemManage_Handler
-                0x08000500                BusFault_Handler
-                0x08000508                UsageFault_Handler
-                0x08000510                SVC_Handler
-                0x0800051c                DebugMon_Handler
-                0x08000528                PendSV_Handler
- .text          0x08000534       0xf4 ..\obj\main.o
-                0x080005cc                main
-                0x080005e0                initSysTick
-                0x08000608                dummy
+                0x0800026c                initTcb
+ .text          0x080003bc      0x154 ..\obj\system_stm32f4xx.o
+                0x080003bc                SystemInit
+                0x08000418                SystemCoreClockUpdate
+ .text          0x08000510       0x50 ..\obj\stm32f4xx_it.o
+                0x08000510                NMI_Handler
+                0x0800051c                HardFault_Handler
+                0x08000524                MemManage_Handler
+                0x0800052c                BusFault_Handler
+                0x08000534                UsageFault_Handler
+                0x0800053c                SVC_Handler
+                0x08000548                DebugMon_Handler
+                0x08000554                PendSV_Handler
+ .text          0x08000560       0xf4 ..\obj\main.o
+                0x080005f8                main
+                0x0800060c                initSysTick
+                0x08000634                dummy
  *(.text*)
  .text.__libc_init_array
-                0x08000628       0x50 c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
-                0x08000628                __libc_init_array
+                0x08000654       0x50 c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                0x08000654                __libc_init_array
  .text.startup.register_fini
-                0x08000678       0x14 c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0800068c        0xc c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
-                0x0800068c                atexit
+                0x080006a4       0x14 c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x080006b8        0xc c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                0x080006b8                atexit
  .text.__libc_fini_array
-                0x08000698       0x2c c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
-                0x08000698                __libc_fini_array
+                0x080006c4       0x2c c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                0x080006c4                __libc_fini_array
  .text.__register_exitproc
-                0x080006c4       0xa4 c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
-                0x080006c4                __register_exitproc
- *fill*         0x08000768       0x98 
+                0x080006f0       0xa4 c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                0x080006f0                __register_exitproc
+ *fill*         0x08000794       0x6c 
  .text.taskSwitch
                 0x08000800      0x200 ..\obj\scheduler.o
                 0x08000800                taskSwitch
@@ -535,33 +550,35 @@ LOAD c:/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-
                 0x10000000                _eccmram = .
                 0x10000000                . = ALIGN (0x4)
 
-.bss            0x20000440      0x83c
+.bss            0x20000440      0x844
                 0x20000440                _sbss = .
                 0x20000440                __bss_start__ = _sbss
  *(.bss)
  .bss           0x20000440       0x1c c:/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/crtbegin.o
  *(.bss*)
  *(COMMON)
- COMMON         0x2000045c      0x820 ..\obj\Task.o
-                0x2000045c                taskTwoStack
-                0x20000860                mainTcb
-                0x20000868                TaskOneTcb
-                0x20000870                TaskTwoTcb
-                0x20000878                taskOneStack
-                0x20000c7c                . = ALIGN (0x4)
-                0x20000c7c                _ebss = .
-                0x20000c7c                __bss_end__ = _ebss
+ COMMON         0x2000045c      0x828 ..\obj\Task.o
+                0x2000045c                readyQueue
+                0x20000460                taskTwoStack
+                0x20000864                mainTcb
+                0x2000086c                TaskOneTcb
+                0x20000874                TaskTwoTcb
+                0x2000087c                runningTcb
+                0x20000880                taskOneStack
+                0x20000c84                . = ALIGN (0x4)
+                0x20000c84                _ebss = .
+                0x20000c84                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000c7c      0x600
-                0x20000c7c                . = ALIGN (0x4)
-                0x20000c7c                PROVIDE (end, .)
-                0x20000c7c                PROVIDE (_end, .)
-                0x20000e7c                . = (. + _Min_Heap_Size)
- *fill*         0x20000c7c      0x200 
-                0x2000127c                . = (. + _Min_Stack_Size)
- *fill*         0x20000e7c      0x400 
-                0x2000127c                . = ALIGN (0x4)
+                0x20000c84      0x600
+                0x20000c84                . = ALIGN (0x4)
+                0x20000c84                PROVIDE (end, .)
+                0x20000c84                PROVIDE (_end, .)
+                0x20000e84                . = (. + _Min_Heap_Size)
+ *fill*         0x20000c84      0x200 
+                0x20001284                . = (. + _Min_Stack_Size)
+ *fill*         0x20000e84      0x400 
+                0x20001284                . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -596,6 +613,7 @@ LOAD ..\obj\stm32f4xx_hal_cortex.o
 LOAD ..\obj\initButton.o
 LOAD ..\obj\Button.o
 LOAD ..\obj\initLED.o
+LOAD ..\obj\LinkList.o
 LOAD ..\obj\system_stm32f4xx.o
 LOAD ..\obj\scheduler.o
 LOAD ..\obj\stm32f4xx_hal.o
@@ -616,13 +634,13 @@ LOAD c:/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/crtend.o
 LOAD c:/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/crtn.o
 OUTPUT(Test.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x1146
- .debug_info    0x00000000      0x249 ..\obj\Task.o
- .debug_info    0x00000249      0x4b4 ..\obj\system_stm32f4xx.o
- .debug_info    0x000006fd       0xb3 ..\obj\scheduler.o
- .debug_info    0x000007b0      0x11e ..\obj\stm32f4xx_it.o
- .debug_info    0x000008ce       0xb9 ..\obj\startup_stm32f429xx.o
- .debug_info    0x00000987      0x7bf ..\obj\main.o
+.debug_info     0x00000000     0x116e
+ .debug_info    0x00000000      0x271 ..\obj\Task.o
+ .debug_info    0x00000271      0x4b4 ..\obj\system_stm32f4xx.o
+ .debug_info    0x00000725       0xb3 ..\obj\scheduler.o
+ .debug_info    0x000007d8      0x11e ..\obj\stm32f4xx_it.o
+ .debug_info    0x000008f6       0xb9 ..\obj\startup_stm32f429xx.o
+ .debug_info    0x000009af      0x7bf ..\obj\main.o
 
 .debug_abbrev   0x00000000      0x424
  .debug_abbrev  0x00000000       0xd6 ..\obj\Task.o
@@ -646,22 +664,22 @@ OUTPUT(Test.elf elf32-littlearm)
  .debug_aranges
                 0x000000a8       0x20 ..\obj\main.o
 
-.debug_line     0x00000000      0x5b5
- .debug_line    0x00000000      0x104 ..\obj\Task.o
- .debug_line    0x00000104      0x115 ..\obj\system_stm32f4xx.o
- .debug_line    0x00000219       0x93 ..\obj\scheduler.o
- .debug_line    0x000002ac      0x108 ..\obj\stm32f4xx_it.o
- .debug_line    0x000003b4       0xae ..\obj\startup_stm32f429xx.o
- .debug_line    0x00000462      0x153 ..\obj\main.o
+.debug_line     0x00000000      0x5ba
+ .debug_line    0x00000000      0x107 ..\obj\Task.o
+ .debug_line    0x00000107      0x115 ..\obj\system_stm32f4xx.o
+ .debug_line    0x0000021c       0x95 ..\obj\scheduler.o
+ .debug_line    0x000002b1      0x108 ..\obj\stm32f4xx_it.o
+ .debug_line    0x000003b9       0xae ..\obj\startup_stm32f429xx.o
+ .debug_line    0x00000467      0x153 ..\obj\main.o
 
-.debug_str      0x00000000      0xb51
- .debug_str     0x00000000      0x175 ..\obj\Task.o
-                                0x1bf (size before relaxing)
- .debug_str     0x00000175      0x21c ..\obj\system_stm32f4xx.o
+.debug_str      0x00000000      0xb67
+ .debug_str     0x00000000      0x18b ..\obj\Task.o
+                                0x1d5 (size before relaxing)
+ .debug_str     0x0000018b      0x21c ..\obj\system_stm32f4xx.o
                                 0x345 (size before relaxing)
- .debug_str     0x00000391       0xc9 ..\obj\stm32f4xx_it.o
+ .debug_str     0x000003a7       0xc9 ..\obj\stm32f4xx_it.o
                                 0x1de (size before relaxing)
- .debug_str     0x0000045a      0x6f7 ..\obj\main.o
+ .debug_str     0x00000470      0x6f7 ..\obj\main.o
                                 0x8d2 (size before relaxing)
 
 .comment        0x00000000       0x70

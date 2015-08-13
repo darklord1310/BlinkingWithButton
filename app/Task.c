@@ -7,6 +7,8 @@ uint8_t taskTwoStack[1028];
 Tcb mainTcb;
 Tcb TaskOneTcb;
 Tcb TaskTwoTcb;
+Tcb *runningTcb;
+Tcb *readyQueue;
 
 /* Task Switching Mechanism
  *
@@ -33,10 +35,12 @@ Tcb TaskTwoTcb;
  */
 void taskOne()
 {
-	//asm(
-
-
-	//);
+  asm(
+  "ldr  r0, =#0xdeadbeef\n\t"
+  "ldr  r1, =#0xbeefdead\n\t"
+  "ldr  r2, =#0xc222222c\n\t"
+  "ldr  r3, =#0xd333333d\n\t"
+  );
 
 	while(1);
 }
@@ -90,4 +94,7 @@ void initTcb()
     cc1->R12 = 0xcc;
     cc1->PC = (uint32_t)&taskOne;
     cc1->xPSR = 0x01000000;
+    
+  runningTcb = &mainTcb;
+  readyQueue = &TaskOneTcb;
 }
