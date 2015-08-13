@@ -1,18 +1,17 @@
 #include "LinkList.h"
-#include <stdio.h>
 
 void initLinkList(LinkList *newlist)
 {
-  newlist->head = NULL;
-  newlist->tail = NULL;
+  newlist->head = 0;
+  newlist->tail = 0;
   newlist->ListSize = 0;
 }
 
 
-void initListNode(ListNode *newNode)
+void initListNode(ListNode *newNode, void *dataToAdd)
 {
-  newNode->data = 0;
-  newNode->next = NULL;
+  newNode->data = dataToAdd;
+  newNode->next = 0;
 }
 
 
@@ -22,27 +21,21 @@ void initListNode(ListNode *newNode)
 */
 int isListEmpty(LinkList *list)
 {
-  if(list->head == NULL)
+  if(list->ListSize == 0)
     return 1;
   else 
     return 0;
 }
 
 
-void addToTail(LinkList *list, void *dataToAdd)
+void addToTail(LinkList *list, ListNode *newNode)
 {
-  ListNode newNode;
-  initListNode(&newNode);
-  
-  newNode.data = dataToAdd;
-  newNode.next = NULL;
-
   if( isListEmpty(list) )
-    list->head = &newNode;
+    list->head = newNode;
   else
-    list->tail->next = &newNode;
+    list->tail->next = newNode;
   
-  list->tail = &newNode;
+  list->tail = newNode;
   list->ListSize++;
 }
 
@@ -59,52 +52,45 @@ void *removeTail(LinkList *list)
   if(!isListEmpty(list))                      //check if list is not empty
   {
     del = list->head;                         //always assume the del to be the head
-    previousDel = NULL;
+    previousDel = 0;
     
-    while(del->next != NULL)                  //if there is the next node for the del(head), then travel until the last node
+    while(del->next != 0)                  //if there is the next node for the del(head), then travel until the last node
     {
       previousDel = del;
       del = del->next;
     }
     
-    if(previousDel == NULL)
+    if(previousDel == 0)
     {
       removeValue = del->data;
-      list->head = NULL;
-      list->tail = NULL;
-      //free(list->head);
+      list->head = 0;
+      list->tail = 0;
     }
     else
     {
       removeValue = del->data;
-      previousDel->next = NULL;
+      previousDel->next = 0;
       list->tail = previousDel;
-      //free(del);
     }
     list->ListSize--;
+    
   }
   
   return removeValue;
 }
 
 
-void addToHead(LinkList *list, void *valueToAdd)
+void addToHead(LinkList *list, ListNode *newNode)
 {
-  ListNode newNode;
-  initListNode(&newNode);
-  
-  newNode.data = valueToAdd;
-  newNode.next = NULL;
-  
   if(isListEmpty(list))
   {
-    list->head = &newNode;
-    list->tail = &newNode;
+    list->head = newNode;
+    list->tail = newNode;
   }
   else
   {
-    newNode.next = list->head;
-    list->head = &newNode;
+    newNode->next = list->head;
+    list->head = newNode;
   }
   
   list->ListSize++;
@@ -119,8 +105,8 @@ void *removeHead(LinkList *list)
   {
     removeValue = list->head->data;
     list->head = list->head->next;
-    if(list->head == NULL)
-      list->tail = NULL;
+    if(list->head == 0)
+      list->tail = 0;
     list->ListSize--;
   }
   

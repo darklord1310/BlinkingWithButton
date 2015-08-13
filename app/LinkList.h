@@ -18,9 +18,10 @@ struct LinkList
 
 
 void initLinkList(LinkList *newlist);
-void addToTail(LinkList *list, void *dataToAdd);
+void initListNode(ListNode *newNode, void *dataToAdd);
+void addToTail(LinkList *list, ListNode *newNode);
 void *removeTail(LinkList *list);
-void addToHead(LinkList *list, void *valueToAdd);
+void addToHead(LinkList *list, ListNode *newNode);
 void *removeHead(LinkList *list);
 void displayList(LinkList *list);
 
